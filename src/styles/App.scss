@@ -1,0 +1,89 @@
+/*全局样式*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div,
+dl,
+dt,
+dd,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+ol,
+ul,
+li,
+table,
+th,
+td,
+p,
+span,
+a {
+    border: 0;
+}
+
+img,
+input {
+    border: none;
+    vertical-align: middle;
+}
+
+body {
+    background-color: #0c111f;
+    transition: background-color 0.3s linear;
+    font-family: 'Helvetica Neue', Tahoma, Arial, 'Hiragino Sans GB', PingFangSC, Averta, 'Microsoft Yahei',  sans-serif;
+    min-width: 1280px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+:global(.clear) {
+    clear: both;
+    font-size: 1px;
+    height: 0;
+    visibility: hidden;
+    line-height: 0;
+}
+
+:global(.clearfix:after) {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+:global(.clearfix) {
+    zoom: 1;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
