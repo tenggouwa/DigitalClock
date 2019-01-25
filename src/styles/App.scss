@@ -28,6 +28,8 @@ a {
     border: 0;
 }
 
+
+
 img,
 input {
     border: none;
@@ -38,12 +40,9 @@ body {
     background-color: #0c111f;
     transition: background-color 0.3s linear;
     font-family: 'Helvetica Neue', Tahoma, Arial, 'Hiragino Sans GB', PingFangSC, Averta, 'Microsoft Yahei',  sans-serif;
-    min-width: 1280px;
+    // min-width: 1446px;
 }
 
-html {
-    overflow-y: scroll;
-}
 
 ul,
 ol {
@@ -54,24 +53,6 @@ button {
     border: none;
     cursor: pointer;
     background-color: transparent;
-}
-
-:global(.clear) {
-    clear: both;
-    font-size: 1px;
-    height: 0;
-    visibility: hidden;
-    line-height: 0;
-}
-
-:global(.clearfix:after) {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-:global(.clearfix) {
-    zoom: 1;
 }
 
 a,
@@ -86,4 +67,6 @@ a:hover {
 html,
 body {
     height: 100%;
+    height: 100%;
+    overflow: hidden;
 }

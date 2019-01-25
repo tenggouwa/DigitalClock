@@ -1,0 +1,48 @@
+.clock-items{
+    position: relative;
+    .clock-item{
+        position: absolute;
+        width: 0;
+        height: 0;
+        width: 120px;
+        height: 40px;
+        background: #0f0;
+        // box-shadow : 0 33px 100px rgba(0, 255, 0, 0.30) ;
+    }
+    .standing{
+        transform: rotate(90deg);
+    }
+    .clock-item:before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-right: 20px #0f0 solid;
+        border-left: none;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        position: absolute;
+        top: 0;
+        left: -20px;
+    }
+    .clock-item:after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px #0f0 solid;
+        border-right: none;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        position: absolute;
+        top: 0;
+        left: 120px;
+    }
+    .clock-point{
+        width: 40px;
+        height: 40px;
+        // box-shadow : 0 33px 100px rgba(0, 255, 0, 0.30) ;
+        // box-shadow : 0 10px 30px rgba(0, 255, 0, 0.44) ;
+        position: absolute;
+        left: 500px;
+        background: #0f0;
+    }
+}
