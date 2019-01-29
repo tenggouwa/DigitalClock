@@ -44,6 +44,13 @@ export default class App extends Component {
             this.setClockTime()
         }, 1000)
     }
+    fullScreen = () => {
+        const el = document.documentElement
+        const rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen
+        if (typeof rfs !== 'undefined' && rfs) {
+            rfs.call(el)
+        }
+    }
     render() {
         const {
             hour1,
@@ -66,6 +73,7 @@ export default class App extends Component {
                 <Point left={955} top={210} type="point" shine />
                 <Clock left={1050} num={second1} />
                 <Clock left={1280} num={second2} />
+                <i className="iconfont icon-quanping1" onClick={() => { this.fullScreen() }} />
             </div>
         )
     }
