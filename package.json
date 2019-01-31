@@ -1,5 +1,5 @@
 {
-  "name": "fota-home-mobile",
+  "name": "DigitalClock",
   "version": "1.0.0",
   "description": "A react project",
   "author": "",
@@ -9,13 +9,16 @@
     "start": "node build/dev-server.js --host 0.0.0.0",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "new": "node build/fs-init.js"
+    "new": "node build/fs-init.js",
+    "estart": "electron .",
+    "package": "electron-packager . 'Hosts' --platform=darwin --arch=x64  --out=./dist --asar --app-version=1.0.0"
   },
   "dependencies": {
     "axios": "^0.16.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "core-decorators": "^0.20.0",
+    "electron": "^4.0.2",
     "formsy-react": "^1.1.4",
     "i18next": "^11.2.2",
     "js-cookie": "^2.2.0",
@@ -58,6 +61,8 @@
     "compression-webpack-plugin": "^1.1.11",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^0.28.11",
+    "electron": "^4.0.2",
+    "electron-packager": "^13.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-friendly-formatter": "^2.0.7",
@@ -84,6 +89,7 @@
     "opn": "^4.0.2",
     "ora": "^1.1.0",
     "postcss-loader": "^2.1.3",
+    "react-app-rewired": "^2.0.3",
     "react-svg-loader": "^2.1.0",
     "rimraf": "^2.6.0",
     "sass": "^1.1.1",
@@ -108,5 +114,8 @@
   "browserslist": [
     "iOS >= 7",
     "Android >= 4.1"
-  ]
+  ],
+  "main": "main.js",
+  "homepage": ".",
+  "DEV": true
 }
