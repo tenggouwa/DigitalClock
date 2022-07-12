@@ -1,4 +1,4 @@
-# react-web
+# react-digitalClock(数字时钟屏保)
 
 > react, webpack构建
 
@@ -155,43 +155,3 @@ module.exports = {
 @button-primary-active-bg-color: #da2f2f;
 
 ```
-
-## formInput组件
-
-添加安全设置input组件<br/>
-引入:`import SafeInput from '@/components/safeInput'`<br/>
-使用:`<SafeInput onChange={} onBlur={} onFocus={} type="0" btnState lable="谷歌验证码" placeholder="请输入谷歌验证码" />`<br/>
-注解:(1)onChange是获取value值得地方,使用e.target.value获取<br/>
-    (2)type值为0或者不传是为普通的text输入框;type值为1时为password输入框<br/>
-    (3)btnState为发送验证码按钮<br/>
-    (4)lable为前置内容<br/>
-    (5)placerholder为默认内容<br/>
-
-## notifyPop组件
-添加弹框组件<br/>
-引入:`import NotifyPop from '../../../components/notifyPop'`<br/>
-使用:`<NotifyPop type="primary" visable={this.state.visable} width="400" height="250" contant="<div>123</div>" confirm={} cancel={} />`<br/>
-注解:(1)visable是开关弹框得位置,true为打开,false为关闭<br/>
-    (2)width和height控制宽高,不传默认400*250<br/>
-    (3)contant为传入的内容(需要带html标签)<br/>
-    (4)type是弹框类型，type为primary的时候是痰喘的提示类型，按钮居中，右上角带有取消叉号；type不传的时候右上角叉号没有，按钮居右
-    (4)confirm和cancel是点击确定和取消发生的函数,如果不穿,按钮消失<br/>
-
-## moneyTable组件
-资金模块table组件<br/>
-引入:`import MoneyTable from '@/components/moneyTable'`<br/>
-使用:`<MoneyTable model="primary" dataShow={this.state.divShow} dataSource={this.state.dataList} dataHeader={this.state.dataHeader} InCoin={this.Incoin} OutCoin={this.Outcoin} GetBack={this.Getback} GetInfo={this.Getinfo />`<br/>
-注解:(1)model是 表格的类型，primary的时候是带button的模式,theme为不带button模式<br/>
-    (2)dataShow为下面要渲染的内容(model为primary时可见)
-    (2)dataSource为表格内的数据，可以使从后台借口返回的内容<br/>
-    (3)dataHeader为表头的内容，`dataHeader: [{name: '币种',key: 'assetName',width: '5%',}]`name为名称；key为dataSource内的字段名称，width为当前列宽度。(需要注意的是，当type为primary的时候width相加需要为85%，theme时则是100%) <br/>
-    (4)InCoin(充币按钮)OutCoin(提币按钮)GetBack(撤销按钮)GetInfo(详情按钮)；不穿的话，按钮不出现，每个按钮点击会返回两个参数，当前列的所有数据，以及点击的类别
-
-## progressBar组件
-
-进度条组件<br/>
-引入:`import ProgressBar from '../../../components/progressBar'`<br/>
-使用:`<ProgressBar step={} words={[]}" />`<br/>
-注解:(1)step为当前步骤为第几步<br/>
-    (2)words传一个数组，形式如[{word:'输入账号', icon: 'point'},{...},...]<br/>
-    (3)数组有两个参数，其中word为步骤条显示的文字，icon为文字前面的图案是否为圆点还是对勾<br/>
